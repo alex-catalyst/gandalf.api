@@ -4,6 +4,10 @@
     "keywords": ["framework", "laravel", "lumen"],
     "license": "MIT",
     "type": "project",
+    "repositories": [{
+        "type":"vcs",
+        "url": "https://github.com/alex-catalyst/lumen-oauth2-mongo.git"
+    }],
     "require": {
         "php": ">=5.5.9",
         "laravel/lumen-framework": "5.2.*",
@@ -14,7 +18,7 @@
         "nebo15/lumen.rest": "*",
         "nebo15/eloquent.changelog": "*",
         "nebo15/lumen.applicationable": "*",
-        "nebo15/lumen.oauth2-mongodb": "*",
+        "nebo15/lumen.oauth2-mongodb": "dev-master",
         "nebo15/lumen.intercom": "*",
         "nebo15/lumen.mixpanel": "*",
         "wildbit/postmark-php": "^2.2"

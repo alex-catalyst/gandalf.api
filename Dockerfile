@@ -24,6 +24,9 @@ COPY . ${HOME}/
 # Install dependencies and generate autoloader
 RUN composer --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader -d=${HOME} install
 
+# DEV: Temporary fix for mcrypt() issue using alex-catalyst/lumen-yauth2-mongo:dev-master 
+RUN composer --no-ansi --no-dev --no-interaction --no-progress --no-scripts --optimize-autoloader -d=${HOME} update
+
 # Fix paths access rights
 RUN chmod 777 -Rf ${HOME}/storage/ ${HOME}/public/dump/
 
